@@ -193,7 +193,7 @@ void PersonFace::Evaluate(void) {
 			int zeroDivFac = eye1Center.x == eye2Center.x ? 1 : 0;
 
             //Generate face line slope and offset
-            float aFact = (eye1Center.y - eye2Center.y) / (eye1Center.x - eye2Center.x + zeroDivFac);
+            float aFact = (float)(eye1Center.y - eye2Center.y) / (float)(eye1Center.x - eye2Center.x + zeroDivFac);
 			
 			aFact = atan(aFact) + CV_PI / 2;
             aFact = tan(aFact);
